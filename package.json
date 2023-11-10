@@ -1,5 +1,5 @@
 {
-  "name": "react-native-layout",
+  "name": "@wayne-kim/react-native-layout",
   "version": "0.1.0",
   "description": "layout components",
   "main": "lib/commonjs/index",
