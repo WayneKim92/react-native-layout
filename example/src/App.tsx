@@ -1,31 +1,31 @@
 import * as React from 'react';
 
-import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-layout';
+import { Text } from 'react-native';
+import { Column, Row, Spacer } from 'react-native-layout';
+import { EdgeInsets } from '../../src/EdgeInsets';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
-  React.useEffect(() => {
-    multiply(3, 7).then(setResult);
-  }, []);
-
   return (
-    <View style={styles.container}>
-      <Text>Result: {result}</Text>
-    </View>
+    <Column justifyContent={'space-between'} flexGrow={1} edgeInsets={EdgeInsets.all(50)}>
+      <Row justifyContent={'space-between'}>
+        <Text>Hello</Text>
+        <Text>Hello</Text>
+        <Text>Hello</Text>
+      </Row>
+      <Row>
+        <Text>Hello</Text>
+        <Spacer flex={1}/>
+        <Text>Hello</Text>
+        <Spacer size={10}/>
+        <Text>Hello</Text>
+      </Row>
+      <Row>
+        <Text>Hello</Text>
+        <Spacer size={10}/>
+        <Text>Hello</Text>
+        <Spacer flex={1}/>
+        <Text>Hello</Text>
+      </Row>
+    </Column>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
-  },
-});
