@@ -1,12 +1,12 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, type ViewProps } from 'react-native';
 
 import type { ViewStyle, FlexStyle } from 'react-native';
 import type { EdgeInsets } from './EdgeInsets';
 
 export interface FlexProps {
   direction?: 'column' | 'row';
-  style?: ViewStyle | ViewStyle[];
+  style?: ViewProps['style'];
   children?: React.ReactNode;
   justifyContent?: FlexStyle['justifyContent'];
   alignItems?: FlexStyle['alignItems'];
