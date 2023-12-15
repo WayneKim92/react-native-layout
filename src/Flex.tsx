@@ -1,17 +1,15 @@
 import React from 'react';
 import { View } from 'react-native';
 
-import type { ReactElement } from 'react';
 import type { ViewStyle, FlexStyle } from 'react-native';
 import type { EdgeInsets } from './EdgeInsets';
 
 export interface FlexProps {
   direction?: 'column' | 'row';
   style?: ViewStyle | ViewStyle[];
-  children?: Element | Element[] | ReactElement | ReactElement[] | undefined;
+  children?: React.ReactNode;
   justifyContent?: FlexStyle['justifyContent'];
   alignItems?: FlexStyle['alignItems'];
-  flex?: FlexStyle['flex'];
   flexGrow?: FlexStyle['flexGrow'];
   flexShrink?: FlexStyle['flexShrink'];
   flexBasis?: FlexStyle['flexBasis'];
@@ -44,6 +42,5 @@ export function Flex(props: FlexProps) {
     ...edgeInsets,
   };
 
-  // @ts-ignore
   return <View style={[viewStyle, style]} {...otherProps} />;
 }
