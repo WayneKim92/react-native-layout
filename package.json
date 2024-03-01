@@ -1,6 +1,6 @@
 {
   "name": "@wayne-kim/react-native-layout",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "layout components",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
