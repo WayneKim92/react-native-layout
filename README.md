@@ -11,11 +11,9 @@ npm install react-native-layout
 ## Usage
 
 ```js
-import { multiply } from 'react-native-layout';
+import { Column, Row, Spacer, EdgeInsets } from 'react-native-layout';
 
-// ...
-
-const result = await multiply(3, 7);
+// Use it in your app
 ```
 
 ## Contributing
