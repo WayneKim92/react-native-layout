@@ -5,7 +5,9 @@ layout components
 ## Installation
 
 ```sh
-npm install react-native-layout
+npm install @wayne-kim/react-native-layout
+#or
+yarn add @wayne-kim/react-native-layout
 ```
 
 ## Usage
